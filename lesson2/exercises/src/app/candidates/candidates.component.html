@@ -3,13 +3,6 @@
         *ngIf = "!editMissionName; else editMission"
         (click)="editMissionName = true"
     >Mission Name: {{missionName}}</h2>
-    <ng-template>
-        <input 
-            type="text"
-            #editMission
-            (key.enter)="changeMissionName(editMission.value)"
-            />
-    </ng-template>
     <br>
     <div class="row justify-content-center">
         <div class="candidates col-3">
@@ -69,7 +62,7 @@
         <input 
             #newName 
             type="text"
-            (key.enter)="changeMissionName(newName.value)"
+            (keyup.enter)="changeMissionName(newName.value)"
         />
     </h2>
 </ng-template>

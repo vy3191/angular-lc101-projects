@@ -18,6 +18,11 @@ export class CandidatesComponent implements OnInit {
   ];
 
   crew: Object[] = [];
+  // BONUS: Code the changeMissionName function here:
+  changeMissionName(name: string): void {
+    this.missionName = name;
+    this.editMissionName = false;
+  }
 
  
   constructor() { }
@@ -33,10 +38,5 @@ export class CandidatesComponent implements OnInit {
     } 
   }
 
-  // BONUS: Code the changeMissionName function here:
-  changeMissionName(name: string): void {
-    this.missionName = name;
-    this.editMissionName = false;
-  }
 
 }
